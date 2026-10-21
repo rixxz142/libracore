@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="LibraCore library circulation desk" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
+    <title>LibraCore</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a light flash in dark mode.
+      (function () {
+        var theme = 'system';
+        try { theme = localStorage.getItem('libracore-theme') || 'system'; } catch (e) {}
+        if (theme === 'light' || theme === 'dark') document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run LibraCore.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
